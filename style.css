@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #1B1C1F;
+  background: #1b1c1f;
 }
 .navigation {
   background-color: #323335;
@@ -11,20 +11,27 @@ body {
   width: 416px;
   justify-content: center;
 }
+
 .logo {
-  animation: rotation 8s infinite linear;
+  animation-name: rotation;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
+
 .logo:hover {
   animation-play-state: paused;
 }
+
 @keyframes rotation {
   0% {
-    transform: rotate(0deg);
+      transform:rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+      transform:rotate(360deg);
   }
 }
+
 @media (max-width: 991px) {
   .menu-bg {
     background-color: #323335;
@@ -87,9 +94,10 @@ body {
   justify-content: center;
   align-items: flex-end;
   border-radius: 56px;
-  margin-right: 8px;
+  margin-left: 8px;
   background-color: #fdf386;
   transition: 0.2s ease-in;
+  overflow-y: clip;
 }
 .fortnite-img:hover {
   background-color: #71e66e;
@@ -102,7 +110,6 @@ body {
   justify-content: center;
   align-items: flex-end;
   border-radius: 56px;
-  margin-right: 8px;
   background-color: #69adfd;
   transition: 0.2s ease-in;
   overflow-y: clip;
@@ -116,9 +123,11 @@ body {
 .dota-img:hover {
   background-color: #fcb8ff;
 }
-.footer-link:nth-child(2){
+
+.footer-link:nth-child(2) {
   margin: 0 24px;
 }
+
 @media (max-width: 420px) {
   .first-card-row {
     flex-direction: column;
@@ -136,7 +145,8 @@ body {
   .footer-content {
     flex-direction: column;
   }
-  footer-link:nth-child(2) {
+  .footer-link:nth-child(2) {
     margin: 0;
   }
 }
+
